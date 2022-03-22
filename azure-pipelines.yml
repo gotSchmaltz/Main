@@ -11,6 +11,10 @@ pool:
 
 steps:
 - script: echo Hello, world!
+- task: DotNetCoreCLI@2
+  inputs:
+    command: 'build'
+    projects: '**/*.csproj'
   displayName: 'Run a one-line script'
 
 - script: |
